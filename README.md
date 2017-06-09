@@ -1,3 +1,6 @@
+This fork merges in the fix for indentation and autoload/plugin directories.
+It does not break compatibility with the original vim-minisnip, only improves it.
+               
                _       _           _
      _ __ ___ (_)_ __ (_)___ _ __ (_)_ __
     | '_ ` _ \| | '_ \| / __| '_ \| | '_ \
