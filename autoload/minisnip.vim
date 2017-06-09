@@ -60,7 +60,7 @@ function! s:SelectPlaceholder()
     try
         " gn misbehaves when 'wrapscan' isn't set (see vim's #1683)
         let [l:ws, &ws] = [&ws, 1]
-        silent keeppatterns execute 'normal! /' . s:delimpat . "/e\<cr>gn\"sy"
+        silent keeppatterns execute 'normal! /' . g:minisnip_delimpat . "/e\<cr>gn\"sy"
     catch /E486:/
         " There's no placeholder at all, enter insert mode
         call feedkeys('i', 'n')
