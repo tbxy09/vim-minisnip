@@ -8,10 +8,11 @@ It does not break compatibility with the original vim-minisnip, only improves it
     |_| |_| |_|_|_| |_|_|___/_| |_|_| .__/
                                     |_|
 
-Minisnip is a tiny plugin that allows you to quickly insert "templates" into
+Minisnip allows you to quickly insert "templates" into
 files. Among all the other snippet plugins out there, the primary goal of
 minisnip is to be as minimal and lightweight as possible.
 
+There is a deoplete source available [here](https://github.com/joereynolds/deoplete-minisnip)
 
 ## Installation
 
