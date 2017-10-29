@@ -1,6 +1,6 @@
 function! minisnip#ShouldTrigger()
     silent! unlet! s:snippetfile
-    let l:cword = matchstr(getline('.'), '\v\w+%' . col('.') . 'c')
+    let l:cword = matchstr(getline('.'), '\v\f+%' . col('.') . 'c')
 
     " look for a snippet by that name
     let l:snippetfile = g:minisnip_dir . '/' . l:cword
