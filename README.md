@@ -1,4 +1,11 @@
-This fork merges in the fix for indentation and autoload/plugin directories.
+This fork has the following (backwards compatible) fixes/improvements:
+
+- Indent snippets when inserted
+- Allow special characters as snippet names
+- Autoload the plugin
+- Installation instructions in README
+- Avoid multiple loads of the plugin
+
 It does not break compatibility with the original vim-minisnip, only improves it.
                
                _       _           _
