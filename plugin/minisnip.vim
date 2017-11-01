@@ -1,3 +1,9 @@
+if exists("g:loaded_minisnip")
+    finish
+endif
+
+let g:loaded_minisnip = 1
+
 " set default global variable values if unspecified by user
 let g:minisnip_dir = fnamemodify(get(g:, 'minisnip_dir', '~/.vim/minisnip'), ':p')
 let g:minisnip_trigger = get(g:, 'minisnip_trigger', '<Tab>')
