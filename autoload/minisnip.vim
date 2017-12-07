@@ -41,7 +41,7 @@ function! minisnip#Minisnip() abort
         " insert the snippet
         call append(line('.'), lns)
         " remove the empty line before the snippet
-        normal! J
+        normal! "_dd
         " select the first placeholder
         call s:SelectPlaceholder()
     else
