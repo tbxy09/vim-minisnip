@@ -8,7 +8,7 @@ Given (A buffer with one minisnip placeholder):
   test
 
 Do (Perform the replacement):
-  A\<Tab>
+  A\\<Tab>
 
 Expect (The buffer to have the replacement text inside):
   This is a test snippet
@@ -17,7 +17,7 @@ Given (A buffer with a named placeholder):
   namedplaceholder
 
 Do (Press tab to get to the placeholder text):
-  A\<Tab>\<Esc>
+  A\\<Tab>
 
 Expect (Only the placeholder text to remain):
   This is a test
