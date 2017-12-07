@@ -1,0 +1,2 @@
+Execute (to check the build is working):
+  AssertEqual 1 1
