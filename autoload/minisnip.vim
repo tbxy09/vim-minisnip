@@ -5,7 +5,7 @@ function! minisnip#ShouldTrigger() abort
     let l:cword = matchstr(getline('.'), '\v\f+%' . col('.') . 'c')
 
     " look for a snippet by that name
-    for l:dir in split(g:minisnip_dir, ':')
+    for l:dir in split(g:minisnip_dir, s:pathsep())
         let l:snippetfile = l:dir . '/' . l:cword
 
         " filetype snippets override general snippets
@@ -134,7 +134,7 @@ function! minisnip#complete() abort
     " Load all snippets that match.
     let l:filetypes = split(&filetype, '\.')
     let l:all = []
-    for l:dir in split(g:minisnip_dir, ':')
+    for l:dir in split(g:minisnip_dir, s:pathsep())
         for l:path in glob(l:dir . '/*', 0, 1)
             let l:f = fnamemodify(l:path, ':t')
             let l:ft = l:f[1:stridx(l:f[1:], '_')]
@@ -170,4 +170,14 @@ function! minisnip#complete() abort
 
     call complete(l:start + 1, l:res)
     return ''
+endfunction
+
+" Get the path separator for this platform.
+function! s:pathsep()
+    for l:w in ['win16', 'win32', 'win64', 'win95']
+        if has(l:w)
+            return ';'
+        endif
+    endfor
+    return ':'
 endfunction
