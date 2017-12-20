@@ -6,6 +6,7 @@ function! minisnip#ShouldTrigger() abort
 
     " look for a snippet by that name
     for l:dir in split(g:minisnip_dir, s:pathsep())
+        let l:dir = fnamemodify(l:dir, ':p')
         let l:snippetfile = l:dir . '/' . l:cword
 
         " filetype snippets override general snippets
@@ -135,7 +136,7 @@ function! minisnip#complete() abort
     let l:filetypes = split(&filetype, '\.')
     let l:all = []
     for l:dir in split(g:minisnip_dir, s:pathsep())
-        for l:path in glob(l:dir . '/*', 0, 1)
+        for l:path in glob(fnamemodify(l:dir, ':p') . '/*', 0, 1)
             let l:f = fnamemodify(l:path, ':t')
             let l:ft = l:f[1:stridx(l:f[1:], '_')]
             let l:name = l:f
