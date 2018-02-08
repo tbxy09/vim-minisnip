@@ -3,7 +3,7 @@ let s:placeholder_texts = []
 function! minisnip#ShouldTrigger() abort
     silent! unlet! s:snippetfile
     let s:cword = matchstr(getline('.'), '\v\f+%' . col('.') . 'c')
-    let s:begcol = col('.')
+    let s:begcol = virtcol('.')
 
     " look for a snippet by that name
     for l:dir in split(g:minisnip_dir, s:pathsep())
