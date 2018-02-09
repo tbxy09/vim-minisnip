@@ -13,15 +13,6 @@ Do (Perform the replacement):
 Expect (The buffer to have the replacement text inside):
   This is a test snippet
 
-Given (A buffer with one minisnip placeholder indented by tab):
-  	test
-
-Do (Perform the replacement):
-  A\<Tab>
-
-Expect (The buffer to have the replacement text inside):
-  	This is a test snippet
-
 Given (A buffer with a named placeholder):
   namedplaceholder
 
@@ -146,3 +137,21 @@ Do (Perform the replacement):
 
 Expect (Expand the final placeholder last):
   one two
+
+Given (A buffer with one minisnip placeholder indented by tab):
+  	test
+
+Do (Perform the replacement):
+  A\<Tab>
+
+Expect (The buffer to have the replacement text inside):
+  	This is a test snippet
+
+Given (A buffer with one minisnip placeholder indented by tab, followed by some text):
+  	test| and other text
+
+Do (Perform the replacement):
+  0f|cl\<Tab>
+
+Expect (The buffer to have the replacement text in correct position):
+  	This is a test snippet and other text

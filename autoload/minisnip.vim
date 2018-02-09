@@ -45,7 +45,7 @@ function! minisnip#Minisnip() abort
         " delete the snippet
         execute ':normal! '.strchars(s:cword).'x'
 
-        if col('.') >= (s:begcol - strchars(s:cword))
+        if virtcol('.') >= (s:begcol - strchars(s:cword))
            " there is something following the snippet
            let l:keepEndOfLine = 1
            let l:endOfLine = strpart(getline(line('.')), (col('.') - 1))
