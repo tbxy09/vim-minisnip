@@ -18,7 +18,7 @@ License: MIT
 ===============================================================================
 OVERVIEW                                                    *minisnip-overview*
 
-Minisnip is a tiny plugin that allows you to quickly insert "templates" into
+Minisnip is a plugin that allows you to quickly insert "templates" into
 files. Among all the other snippet plugins out there, the primary goal of
 minisnip is to be as minimal and lightweight as possible.
 
@@ -141,7 +141,7 @@ This will automatically fill the `#define` line with the value entered on the
 Defaults: '{{-', '-}}'
 
 The start and end delimiters of the final placeholder string to use. While the
-normal placeholders will be dealt with in oder they apear in the snippet,
+normal placeholders will be dealt with in the order they appear in the snippet,
 these placeholders will be targeted last.>
     # BEGIN FUNCTON {{++}}
     {{--}}
