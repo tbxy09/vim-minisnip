@@ -6,7 +6,7 @@ let g:loaded_minisnip = 1
 
 " set default global variable values if unspecified by user
 let g:minisnip_dir = get(g:, 'minisnip_dir', '~/.vim/minisnip')
-let g:minisnip_trigger = get(g:, 'minisnip_trigger', '<Tab>')
+let g:minisnip_trigger = get(g:, 'minisnip_trigger', '<c-t>')
 let g:minisnip_startdelim = get(g:, 'minisnip_startdelim', '{{+')
 let g:minisnip_enddelim = get(g:, 'minisnip_enddelim', '+}}')
 let g:minisnip_finalstartdelim = get(g:, 'minisnip_finalstartdelim', '{{-')
@@ -42,6 +42,6 @@ endif
 " Completion
 if !hasmapto('<Plug>(minisnip-complete)')
     imap <C-x><C-t> <Plug>(minisnip-complete)
-    inoremap <expr> <C-t> pumvisible() ?  "\<C-n>" : "\<C-t>"
-    imap <expr> <CR> pumvisible() ? "\<Tab>" : "\<CR>"
+    inoremap <expr> <C-j> pumvisible() ?  "\<C-n>" : "\<C-j>"
+    " imap <expr> <CR> pumvisible() ? "\<Tab>" : "\<CR>"
 endif
